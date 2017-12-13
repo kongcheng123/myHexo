@@ -1,7 +1,9 @@
 ---
 title: Java == 和 equals
-date: 2017-10-14 10:05:55
+date: 2017-10-10 10:05:55
 tags:
+- java
+categories:
 - java
 ---
 > 在java中，==和equals的使用有两种情况：字符串变量，和非字符串变量

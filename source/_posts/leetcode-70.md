@@ -89,6 +89,25 @@ public class climb_stairs {
         }
         return climb_Stairs(i + 1, n) + climb_Stairs(i + 2, n);
     }
+   /**
+     * 解法二(解法一的时间复杂度为O(2n),数字过大会超时)
+     *
+     * 该算法利用了斐波那契函数，简单明了
+     * @param n
+     * @return
+     */
+    public static int climbStairs_2(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
+    }
 
     @Test
     public void test(){
